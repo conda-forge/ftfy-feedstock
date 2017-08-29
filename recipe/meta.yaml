@@ -10,9 +10,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256sum }}
+  patches:
+    - tests-fix-linesep.patch
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
   skip: True  # [py2k]
   entry_points:
@@ -35,9 +37,8 @@ test:
   source_files:
     - tests
   commands:
-    - nosetests -v tests  # [unix]
-    # CLI tests fail on windows.
-    - nosetests -v -e test_cli tests  # [win]
+    - PYTHONIOENCODING=utf8 nosetests -v tests  # [unix]
+    - SET "PYTHONIOENCODING=utf8" & nosetests -v tests  # [win]
 
 about:
   home: https://github.com/LuminosoInsight/python-ftfy/
