@@ -14,14 +14,16 @@ Summary: Fixes some problems with Unicode text after the fact
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ftfy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ftfy-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/ftfy-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ftfy-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ftfy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ftfy-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ftfy-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ftfy-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/ftfy-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ftfy-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ftfy-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ftfy-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ftfy/badges/version.svg)](https://anaconda.org/conda-forge/ftfy)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ftfy/badges/downloads.svg)](https://anaconda.org/conda-forge/ftfy)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ftfy-green.svg)](https://anaconda.org/conda-forge/ftfy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ftfy.svg)](https://anaconda.org/conda-forge/ftfy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ftfy.svg)](https://anaconda.org/conda-forge/ftfy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ftfy.svg)](https://anaconda.org/conda-forge/ftfy) |
 
 Installing ftfy
 ===============
