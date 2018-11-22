@@ -1,6 +1,5 @@
 {% set name = "ftfy" %}
-{% set version = "5.3.0" %}
-{% set sha256sum = "0ba702d5138f9b35df32b55920c9466208608108f1f3d5de1a68c17e3d68cb7f" %}
+{% set version = "5.5.0" %}
 
 package:
   name: {{ name }}
@@ -9,20 +8,19 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256sum }}
+  sha256: 525ea45a871f52ddb170e66b01f35f1b3022995016c81efa305e628937b85443
 
 build:
   number: 1000
-  script: python setup.py install --single-version-externally-managed --record=record.txt
-  skip: True  # [py2k]
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: True  # [py2k or py>36]
   entry_points:
     - ftfy = ftfy.cli:main
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     # Required for loading package data via `pkg_resources` module.
