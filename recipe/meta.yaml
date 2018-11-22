@@ -29,13 +29,11 @@ requirements:
 
 test:
   requires:
-    - nose
+    - pytest
   source_files:
     - tests
   commands:
-    - nosetests -v tests  # [unix]
-    # CLI tests fail on windows.
-    - nosetests -v -e test_cli tests  # [win]
+    - py.test
 
 about:
   home: https://github.com/LuminosoInsight/python-ftfy/
