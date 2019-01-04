@@ -33,7 +33,8 @@ test:
   source_files:
     - tests
   commands:
-    - py.test
+    - py.test --deselect tests/test_cli.py  # [win]
+    - py.test  # [not win]
 
 about:
   home: https://github.com/LuminosoInsight/python-ftfy/
