@@ -34,6 +34,7 @@ test:
     - tests
   commands:
     - py.test --deselect tests/test_cli.py  # [win]
+    # CLI tests fail on windows.
     - py.test  # [not win]
 
 about:
