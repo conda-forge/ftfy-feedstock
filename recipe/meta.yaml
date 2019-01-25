@@ -1,5 +1,5 @@
 {% set name = "ftfy" %}
-{% set version = "5.5.0" %}
+{% set version = "5.5.1" %}
 
 package:
   name: {{ name }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 525ea45a871f52ddb170e66b01f35f1b3022995016c81efa305e628937b85443
+  sha256: fa74757fb7cb444366fa6a79c2feabd40281a44dfbf6eaed492a804764ee26b2
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   skip: True  # [py2k or py>36]
   entry_points:
