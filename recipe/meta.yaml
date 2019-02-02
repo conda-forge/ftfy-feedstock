@@ -13,16 +13,16 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [py2k]
+  noarch: python
   entry_points:
     - ftfy = ftfy.cli:main
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     # Required for loading package data via `pkg_resources` module.
     - setuptools
     - wcwidth
