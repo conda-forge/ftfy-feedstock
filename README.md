@@ -18,9 +18,8 @@ Summary: Fixes some problems with Unicode text after the fact
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ftfy-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ftfy-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/ftfy-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ftfy-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ftfy-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ftfy-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/ftfy-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/ftfy-feedstock)
 
 Current release info
 ====================

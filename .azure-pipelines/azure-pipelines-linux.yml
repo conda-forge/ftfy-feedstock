@@ -10,8 +10,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_python3.6:
-        CONFIG: linux_python3.6
+      linux_:
+        CONFIG: linux_
         UPLOAD_PACKAGES: False
   steps:
   - script: |
