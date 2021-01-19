@@ -5,11 +5,13 @@ Home: https://github.com/LuminosoInsight/python-ftfy/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ftfy-feedstock/blob/master/LICENSE.txt)
 
 Summary: Fixes some problems with Unicode text after the fact
 
+Development: https://github.com/LuminosoInsight/python-ftfy
 
+Documentation: http://ftfy.readthedocs.io/
 
 Current build status
 ====================
