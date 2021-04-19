@@ -1,5 +1,5 @@
 {% set name = "ftfy" %}
-{% set version = "6.0" %}
+{% set version = "6.0.1" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4d7445f7c05d4ad3751147094da400dcf1f7a9c93844f5ed168bbcf17e4598ca
+  sha256: 9eb68533eb2a6124e96ed7f63049e6c519194fda3fae92629b5e0b5753cb2c8f
 
 build:
   number: 0
