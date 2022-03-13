@@ -27,7 +27,9 @@ requirements:
 
 test:
   source_files:
+    - pyproject.toml
     - tests
+    
   imports:
     - ftfy
     - ftfy.bad_codecs
