@@ -36,6 +36,8 @@ test:
   commands:
     - pip check
     - ftfy --help
+    - set PYTHONUTF8=1
+    - set PYTHONIOENCODING="UTF-8"
     - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
