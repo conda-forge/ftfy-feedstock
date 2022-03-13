@@ -1,51 +1,53 @@
 {% set name = "ftfy" %}
-{% set version = "6.0.3" %}
+{% set version = "6.1.1" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ba71121a9c8d7790d3e833c6c1021143f3e5c4118293ec3afb5d43ed9ca8e72b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ftfy-{{ version }}.tar.gz
+  sha256: bfc2019f84fcd851419152320a6375604a0f1459c281b5b199b2cd0d2e727f8f
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
     - ftfy = ftfy.cli:main
 
 requirements:
   host:
-    - python ==3.8.1
     - pip
+    - poetry-core >=1.0.0
+    - python >=3.7,<4.0
   run:
-    - python >=3.6,<3.9
-    # Required for loading package data via `pkg_resources` module.
-    - setuptools
-    - wcwidth
+    - python >=3.7,<4.0
+    - wcwidth >=0.2.5
 
 test:
-  requires:
-    - pytest
   source_files:
-    - tests
+    - tests    
+  imports:
+    - ftfy
+    - ftfy.bad_codecs
   commands:
-    - py.test --deselect tests/test_cli.py  # [win]
-    # CLI tests fail on windows.
-    - py.test  # [not win]
+    - pip check
+    - ftfy --help
+    - pytest -vvv --capture=tee-sys -k "not test_cli" tests
+  requires:
+    - pip
+    - pytest    
 
 about:
   home: https://github.com/LuminosoInsight/python-ftfy/
   license: MIT
   license_file: LICENSE.txt
   summary: Fixes some problems with Unicode text after the fact
-  dev_url: https://github.com/LuminosoInsight/python-ftfy
   doc_url: http://ftfy.readthedocs.io/
 
 extra:
   recipe-maintainers:
     - rmax
     - FernandezMathieu
+    - thewchan
