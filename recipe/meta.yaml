@@ -27,21 +27,16 @@ requirements:
 
 test:
   source_files:
-    - pyproject.toml
-    - tests
-    
+    - tests    
   imports:
     - ftfy
     - ftfy.bad_codecs
   commands:
     - pip check
     - ftfy --help
-    - set PYTHONUTF8=1
-    - set PYTHONIOENCODING="UTF-8"
-    - pytest -vvv --capture=tee-sys tests
+    - pytest -vvv --capture=tee-sys -k "not test_cli" tests
   requires:
     - pip
-    - poetry
     - pytest    
 
 about:
