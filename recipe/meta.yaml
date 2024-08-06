@@ -1,5 +1,5 @@
 {% set name = "ftfy" %}
-{% set version = "6.2.0" %}
+{% set version = "6.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ftfy-{{ version }}.tar.gz
-  sha256: 5e42143c7025ef97944ca2619d6b61b0619fc6654f98771d39e862c1424c75c0
+  sha256: 79b505988f29d577a58a9069afe75553a02a46e42de6091c0660cdc67812badc
 
 build:
   number: 0
