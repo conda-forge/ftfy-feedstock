@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - poetry-core >=1.0.0
-    - python >=3.7,<4.0
+    - python >=3.9,<4.0
+    - hatchling
   run:
-    - python >=3.7,<4.0
-    - wcwidth >=0.2.5
+    - python >=3.9,<4.0
+    - wcwidth
 
 test:
   source_files:
