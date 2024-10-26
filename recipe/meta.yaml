@@ -1,5 +1,5 @@
 {% set name = "ftfy" %}
-{% set version = "6.3.0" %}
+{% set version = "6.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ftfy-{{ version }}.tar.gz
-  sha256: 1c7d6418e72b25a7760feb150acf574b86924dbb2e95b32c0b3abbd1ba3d7ad6
+  sha256: 9b3c3d90f84fb267fe64d375a07b7f8912d817cf86009ae134aa03e1819506ec
 
 build:
   number: 0
@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9,<4.0
+    - python >=3.9
     - hatchling
   run:
-    - python >=3.9,<4.0
+    - python >=3.9
     - wcwidth
 
 test:
